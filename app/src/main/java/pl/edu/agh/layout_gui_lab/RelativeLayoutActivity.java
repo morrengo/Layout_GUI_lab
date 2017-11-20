@@ -16,12 +16,19 @@ public class RelativeLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
-        Button button = (Button) findViewById(R.id.button2);
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
         final EditText editText = (EditText) findViewById(R.id.editText);
-        button.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String text = editText.getText().toString();
                 editText.setText(text.toUpperCase(),TextView.BufferType.EDITABLE);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String text = editText.getText().toString();
+                editText.setText(text.toLowerCase(),TextView.BufferType.EDITABLE);
             }
         });
     }

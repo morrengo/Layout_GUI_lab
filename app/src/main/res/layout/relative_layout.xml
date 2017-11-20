@@ -22,12 +22,12 @@
             android:id="@+id/button1"
             android:layout_width="96dp"
             android:layout_height="wrap_content"
-            android:text="text" />
+            android:text="BIG" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="96dp"
             android:layout_height="wrap_content"
-            android:text="text" />
+            android:text="small" />
     </LinearLayout>
 </RelativeLayout>
