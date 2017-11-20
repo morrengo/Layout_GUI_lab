@@ -9,21 +9,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LinearLayoutActivity extends AppCompatActivity {
-    LinearLayout ll;
     private final Context ctx = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ll = (LinearLayout) findViewById(R.id.linear);
+        //TO DO create and connect with linear layout
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                TextView textView = new TextView(ctx);
-                textView.setTextSize(40);
-                textView.setText("text");
-                ll.addView(textView);
-                ll.invalidate();
+                //TO DO implement adding child textview to linear layout
             }
         });
     }
