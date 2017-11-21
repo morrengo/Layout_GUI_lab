@@ -21,7 +21,22 @@ public class GridViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.grid_view_layout);
-        //TO DO set adapter in gridview and add on click listener to items in gridview
+
+        gridView = (GridView) findViewById(R.id.gridView1);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, numbers);
+
+        gridView.setAdapter(adapter);
+        final Context ctx = this;
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                numbers[position] = "X";
+
+                gridView.invalidateViews();
+            }
+        });
 
     }
 }

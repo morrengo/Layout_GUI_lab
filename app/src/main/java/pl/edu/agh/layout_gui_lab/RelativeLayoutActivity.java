@@ -21,12 +21,14 @@ public class RelativeLayoutActivity extends AppCompatActivity {
         final EditText editText = (EditText) findViewById(R.id.editText);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //TO DO change letters to small
+                String text = editText.getText().toString();
+                editText.setText(text.toUpperCase(),TextView.BufferType.EDITABLE);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //TO DO change letters to big
+                String text = editText.getText().toString();
+                editText.setText(text.toLowerCase(),TextView.BufferType.EDITABLE);
             }
         });
     }
